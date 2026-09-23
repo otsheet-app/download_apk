@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>OTSHEET · ইনস্টল করুন</title>
+    <title>OTSHEET · ডাউনলোড করুন</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* ----- global reset & variables (Dashboard matching) ----- */
@@ -124,6 +124,7 @@
             margin-bottom: 24px;
         }
 
+    
         .install-btn {
             display: inline-flex;
             align-items: center;
@@ -149,8 +150,9 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 24px rgba(37, 99, 235, 0.35);
         }
-
-        /* Instructions Card */
+  
+  
+   /* Instructions Card */
         .instructions-card {
             background: #fff8e6;
             border: 1px solid #ffe5a3;
@@ -175,6 +177,7 @@
             color: #78350f;
             line-height: 1.6;
         }
+
 
         /* Features Section */
         .section-title {
@@ -235,6 +238,30 @@
             line-height: 1.4;
         }
 
+        /* Info Badge Card */
+        .info-card {
+            background: var(--card);
+            border-radius: var(--radius-card);
+            padding: 20px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .info-item h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .info-item p {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
         footer {
             text-align: center;
             margin-top: 30px;
@@ -255,18 +282,35 @@
         <!-- Hero Section -->
         <div class="hero-card">
             <div class="app-icon">
-                <i class="fas fa-download"></i>
+                <i class="fas fa-business-time"></i>
             </div>
-            <h1>OTSHEET Pro ইনস্টল করুন</h1>
-            <p>গিটহাব থেকে অফিশিয়াল অ্যান্ড্রয়েড অ্যাপ সরাসরি আপনার ফোনে ইনস্টল করুন।</p>
+            <h1>OTSHEET Pro অ্যাপ ডাউনলোড করুন</h1>
+            <p>আপনার প্রতিদিনের ওভারটাইম হিসাব, বেসিক বেতন ও বোনাস সহ মোট প্রাপ্য টাকা হিসাব করার সবচেয়ে সহজ ও বিশ্বস্ত সমাধান।</p>
             
-            <!-- GitHub Release লিঙ্কটি নিচে বসান -->
+           <!-- GitHub Release লিঙ্কটি নিচে বসান -->
             <a href="https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/releases/latest/download/app-release.apk" class="install-btn">
                 <i class="fab fa-github"></i> Install App (APK)
             </a>
         </div>
 
-        <!-- Instructions for APK Installation -->
+        <!-- Info Badges -->
+        <div class="info-card" style="margin-bottom: 24px;">
+            <div class="info-item">
+                <h4>১০০%</h4>
+                <p>নিরাপদ</p>
+            </div>
+            <div class="info-item">
+                <h4>সহজ</h4>
+                <p>হিসাব-নিকাশ</p>
+            </div>
+            <div class="info-item">
+                <h4>ফ্রি</h4>
+                <p>ব্যবহার</p>
+            </div>
+        </div>
+      
+      
+      <!-- Instructions for APK Installation -->
         <div class="instructions-card">
             <h4><i class="fas fa-exclamation-circle"></i> কীভাবে ইনস্টল করবেন?</h4>
             <ol>
