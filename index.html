@@ -319,6 +319,10 @@
                 <h4>ফ্রি</h4>
                 <p>ব্যবহার</p>
             </div>
+            <div class="info-item">
+                <h4 id="download-count">—</h4>
+                <p>ডাউনলোড</p>
+            </div>
         </div>
       
       
@@ -374,6 +378,36 @@
         </footer>
 
     </div>
+
+    <!-- GitHub APK download count -->
+    <script>
+        async function loadDownloadCount() {
+            const countElement = document.getElementById('download-count');
+
+            try {
+                const response = await fetch(
+                    'https://api.github.com/repos/otsheet-app/App/releases/tags/v1.0.0',
+                    { headers: { 'Accept': 'application/vnd.github+json' } }
+                );
+
+                if (!response.ok) throw new Error('GitHub API error');
+
+                const release = await response.json();
+                const apk = (release.assets || []).find(
+                    asset => asset.name.toLowerCase() === 'otsheet.apk'
+                );
+
+                countElement.textContent = apk
+                    ? Number(apk.download_count || 0).toLocaleString('bn-BD')
+                    : '০';
+            } catch (error) {
+                countElement.textContent = '—';
+                console.error('Download count error:', error);
+            }
+        }
+
+        loadDownloadCount();
+    </script>
 
 </body>
 </html>
